@@ -32,6 +32,7 @@ public class DoisRobos {
                 robo1.mover(movimentoRobo1);
                 movimentosValidosRobo1++;
             } catch (MovimentoInvalidoException e) {
+                System.out.println(e.getMessage());
                 movimentosInvalidosRobo1++;
             }
 
@@ -44,6 +45,7 @@ public class DoisRobos {
                 robo2.mover(movimentoRobo2);
                 movimentosValidosRobo2++;
             } catch (MovimentoInvalidoException e) {
+                System.out.println(e.getMessage());
                 movimentosInvalidosRobo2++;
             }
         }

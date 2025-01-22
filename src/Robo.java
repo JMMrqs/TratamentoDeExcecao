@@ -50,27 +50,36 @@ public class Robo {
 
         switch (direcao.toLowerCase()) {
             case "up":
-                if (y + 1 > 3)
-                    throw new MovimentoInvalidoException("Tentativa de movimento inválido: " + direcao);
+                if (y + 1 > 3) {
+                    System.out.println("Posição atual: (" + x + ", " + y + ")");
+                    throw new MovimentoInvalidoException("** Tentativa de movimento inválido: " + direcao);
+                }
                 y++;
                 break;
             case "down":
-                if (y - 1 < 0)
-                    throw new MovimentoInvalidoException("Tentativa de movimento inválido: " + direcao);
+                if (y - 1 < 0) {
+                    System.out.println("Posição atual: (" + x + ", " + y + ")");
+                    throw new MovimentoInvalidoException("** Tentativa de movimento inválido: " + direcao);
+                }
                 y--;
                 break;
             case "right":
-                if (x + 1 > 3)
-                    throw new MovimentoInvalidoException("Tentativa de movimento inválido: " + direcao);
+                if (x + 1 > 3) {
+                    System.out.println("Posição atual: (" + x + ", " + y + ")");
+                    throw new MovimentoInvalidoException("** Tentativa de movimento inválido: " + direcao);
+                }
                 x++;
                 break;
             case "left":
-                if (x - 1 < 0)
-                    throw new MovimentoInvalidoException("Tentativa de movimento inválido: " + direcao);
+                if (x - 1 < 0) {
+                    System.out.println("Posição atual: (" + x + ", " + y + ")");
+                    throw new MovimentoInvalidoException("** Tentativa de movimento inválido: " + direcao);
+                }
                 x--;
                 break;
             default:
-                throw new MovimentoInvalidoException("Tentativa de movimento inválido: " + direcao);
+                System.out.println("Posição atual: (" + x + ", " + y + ")");
+                throw new MovimentoInvalidoException("** Tentativa de movimento inválido: " + direcao);
         }
         System.out.println("Posição atual: (" + x + ", " + y + ")");
     }

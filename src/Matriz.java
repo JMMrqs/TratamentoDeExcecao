@@ -18,6 +18,7 @@ public class Matriz {
             }
             System.out.println();
         }
+        System.out.println();
     }
 
     public static void printMatriz(Robo robo1, Robo robo2, int alimentoX, int alimentoY) {
